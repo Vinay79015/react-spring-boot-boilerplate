@@ -23,7 +23,7 @@ public class UrlController {
             return ResponseEntity.badRequest().body(Map.of("message", "Invalid URL format"));
         }
         Url savedUrl = urlService.shortenUrl(url.getOriginalUrl());
-        return ResponseEntity.ok(Map.of("shortUrl", "http://localhost:7070/api/" + savedUrl.getShortCode()));
+        return ResponseEntity.ok(Map.of("shortUrl", "https://react-spring-boot-boilerplate-2la3.onrender.com/api/" + savedUrl.getShortCode()));
     }
 
     @GetMapping("/{code}")
